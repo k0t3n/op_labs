@@ -12,7 +12,8 @@
 
 
 float PurchaseCounter(int number_pencil, int number_notebook) {
-    int PENCIL_PRICE, NOTEBOOK_PRICE, price;
+    float PENCIL_PRICE, NOTEBOOK_PRICE;
+    int price;
     
     PENCIL_PRICE = 20;
     NOTEBOOK_PRICE = 40;
