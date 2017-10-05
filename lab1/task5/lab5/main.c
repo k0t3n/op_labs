@@ -19,7 +19,6 @@ float VerstToKM (float verst) {
 
 int main() {
     float verst, result;
-    puts("======== Программа для пересчета расстояния из верст в километры========\n");
     puts("Введите количество верст");
     scanf("%f", &verst);
     result = VerstToKM(verst);
