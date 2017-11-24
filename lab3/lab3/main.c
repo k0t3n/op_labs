@@ -40,6 +40,7 @@ int main() {
     }
     
     
+    
     // Вывод всех данных
     
     printf("Выведем все переменные: first_var - %.i, second_var - %.2f, third_var - %.lf, fourth_var - %.c\n", first_var, second_var, third_var, str_var);
@@ -63,11 +64,14 @@ int main() {
     
     // Сравнение чисел
     
-    if ((float) first_var >= (float) second_var) {
-        puts("Первое число больше или равно второму");
-    }
-    else
-        puts("Первое число меньше второго");
+    
+//    if ((float) first_var >= (float) second_var) {
+//        puts("Первое число больше или равно второму");
+//    }
+//    else
+//        puts("Первое число меньше второго");
+    
+    (float) first_var >= (float) second_var ? puts("Первое число больше или равно второму") : puts("Первое число меньше второго");
     
     if ((float) second_var >= (float) third_var) {
         puts("Второе число больше или равно третьему");
