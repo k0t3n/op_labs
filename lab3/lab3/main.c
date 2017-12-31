@@ -1,13 +1,4 @@
-//
-//  main.c
-//  lab3
-//
-//  Created by Алексей Котенко on 05.10.2017.
-//  Copyright © 2017 Алексей Котенко. All rights reserved.
-//
-
 #include <stdio.h>
-
 
 int main() {
     int first_var, new_first_var;
@@ -16,7 +7,6 @@ int main() {
     char str_var;
     
     // Ввод данных
-    
     puts("Введите строку (char): ");
     scanf(" %c", &str_var);
     printf("str_var = %c\n", str_var);
@@ -34,19 +24,14 @@ int main() {
     printf("third_var = %lf\n", third_var);
     
     // Проверка введенных данных
-    
     if (first_var && second_var && third_var && str_var) {
         puts("Все переменные введены");
     }
     
-    
-    
     // Вывод всех данных
-    
     printf("Выведем все переменные: first_var - %.i, second_var - %.2f, third_var - %.lf, fourth_var - %.c\n", first_var, second_var, third_var, str_var);
     
     // Сложение/вычитание/умножение/деление
-    
     amount = (float) first_var + second_var + (float) third_var;
     subtraction = (float) first_var - second_var - (float) third_var;
     multiplication = (float) first_var * second_var * (float) third_var;
@@ -54,22 +39,11 @@ int main() {
     printf("Сумма - %.2f\n Разность - %.2f\n Деление - %.2f\n Умножение - %.2f\n", amount, subtraction, multiplication, division);
     
     // Инкремент/дискремент
-    
     new_first_var = first_var++;
     new_second_var = second_var--;
     new_third_var = third_var++;
     
     printf("Прибавим 1 к первой и третьей переменной, из второй вычтем. Результат: first_var - %.i, second_var - %.2f, third_var - %.lf, fourth_var - %.c\n", first_var, second_var, third_var, str_var);
-    
-    
-    // Сравнение чисел
-    
-    
-//    if ((float) first_var >= (float) second_var) {
-//        puts("Первое число больше или равно второму");
-//    }
-//    else
-//        puts("Первое число меньше второго");
     
     (float) first_var >= (float) second_var ? puts("Первое число больше или равно второму") : puts("Первое число меньше второго");
     
@@ -78,6 +52,4 @@ int main() {
     }
     else
         puts("Второе число меньше третьего");
-    
-    
 }

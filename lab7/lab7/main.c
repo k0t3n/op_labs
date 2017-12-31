@@ -14,7 +14,7 @@ int main()
     printf("Введите значение х:");
     scanf("%f",&x);
     if (x<0) {
-        y = abs(x) + log(pow(x, 2) + 1);
+        y = fabsf(x) + log(pow(x, 2) + 1);
         printf("Выполнилось первое условие\n");
     }
     else if (x>0) {
