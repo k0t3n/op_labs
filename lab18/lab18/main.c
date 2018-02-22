@@ -1,47 +1,55 @@
 //
 //  main.c
-//  lab14
+//  lab18
 //
-//  Created by Алексей Котенко on 24.11.2017.
-//  Copyright © 2017 Алексей Котенко. All rights reserved.
+//  Created by Алексей Котенко on 08.02.2018.
+//  Copyright © 2018 Алексей Котенко. All rights reserved.
 //
-// Сжать массив, удалив из него все элементы, модуль которых не превышает единицу. Освободившиеся в конце массива элементы
-// заполнить нулями
 
 #include <stdio.h>
-#define HB 10    //размер массива
+#define ROW 3 //кол-во строк
+#define COL 3 //кол-во столбцов
 
-int main()
-{
-    float a[HB];    // массив
-    int i;    // индекс массива
-    int tmp;
+int main() {
+    int a[ROW][COL];    //массив
+    int sum[ROW];    //максимальные элементы
+    int k_sum;
+    int i,j;
     
-    printf("\nВведите в одной строке %i чисел, и нажмите ENTER\n",HB);
-    
-    // Инициализация массива
-    for (i = 0; i < HB; i++) {
-        scanf("%f", &a[i]);
+    puts("Вычисляем сумму положительных элементов по строкам");
+    puts("Вводите массив построчно");
+    for (i=0; i<ROW ;i++)
+    {
+        for(j=0; j<COL; j++)
+            scanf("%i",&a[i][j]);
     }
     
-    for (i = 0; i < HB; i++ ){
-        a[i];
+    puts("Введенный массив");
+    for(i=0; i<ROW; i++)
+    {
+        for(j=0; j<COL; j++)
+            printf("%i",a[i][j]);
+        printf("\n");
+    }
+    // вычисляем сумму строк
+    for(i=0; i<ROW; i++){
+        k_sum = 0;
+        
+        for(j=0; j<COL; j++){
+            if (a[i][j] > 0){
+                k_sum += a[i][j];
+            }
+        }
+        sum[i] = k_sum;
+        printf("\n");
+    }
+     // выводим суммы строк
+    puts("Выводим сумму положительных элементов строки");
+    for(i=0; i<ROW; i++){
+        printf("Строка %i: %i", i+1, sum[i]);
+        printf("\n");
     }
     
-    
-    
-    
-    
-    for (i = 1; i <= HB; i++ ){
-        printf("Значение a[%i] = %2.f \n", i, a[i]);
-    }
-    
-    
+    return 0;
 }
-
-
-
-
-
-
 
